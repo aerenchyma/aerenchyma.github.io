@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Executing a Function on Keypress Event in jQuery</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 10px;
+        background: lightgreen;
+        display: none;
+    }
+    div{
+        margin: 20px 0;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    //var i = 0;
+    $('input[type="text"]').click(function(){
+       
+         $(".btn-one").click(function(){
+        	if ( $("input:text").val() == "A train" ) {
+    			$("p").css("background-color","blue").show().fadeOut();
+  			} 
+        	else {
+            	//alert($("input:text").val()); // comment for debug
+            	$("p").css("background-color","red").show().fadeOut();
+        	}
+    	 });
+           
+    });
+});
+</script>
+</head>
+<body>
+    <input type="text">
+    <button type="button" class="btn-one">Click me to see train result</button>
+	<div><strong>Note:</strong> Enter a train name inside the input box and click button to see result.</div>
+    <p>Platform is busy.</p>
+</body>
+</html>                            
